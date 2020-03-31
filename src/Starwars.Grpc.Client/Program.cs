@@ -1,5 +1,5 @@
 ﻿using Grpc.Net.Client;
-using Starwars.Grpc.Server;
+using Starwars.Grpc;
 using System;
 using System.Threading.Tasks;
 
