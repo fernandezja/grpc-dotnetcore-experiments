@@ -11,7 +11,21 @@ namespace Starwars.Grpc.Client
 
         static async Task Main(string[] args)
         {
+            await SayHello();
 
+            await GetQuote();
+
+            await GetQuote();
+
+            await GetQuote();
+
+            Console.WriteLine("Press any key to continue...");
+
+            Console.ReadKey();
+        }
+
+        private static async Task SayHello()
+        {
             using (var channel = GrpcChannel.ForAddress(ENDPOINT))
             {
                 //option csharp_namespace = "Starwars.Grpc.Server";
@@ -27,10 +41,27 @@ namespace Starwars.Grpc.Client
                 Console.WriteLine(helloReply.Message);
 
             }
+        }
 
-            Console.WriteLine("Press any key to continue...");
+        private static async Task GetQuote()
+        {
+            using (var channel = GrpcChannel.ForAddress(ENDPOINT))
+            {
 
-            Console.ReadKey();
+                var client = new Quotes.QuotesClient(channel);
+
+                var quoteRequest = new QuoteRequest();
+
+                var quoteResponse = await client.GetQuoteAsync(quoteRequest);
+
+                Console.BackgroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+
+                Console.WriteLine($"\"{quoteResponse.Quote}\" - ({quoteResponse.Where})");
+
+                Console.ResetColor();
+
+            }
         }
     }
 }

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Starwars.Grpc";
+
+package quotes;
+
+//Method GetQuote with empty parameter 
+service Quotes {
+  rpc GetQuote(QuoteRequest) returns (QuoteResponse);
+}
+
+//Empty parameter 
+message QuoteRequest {}
+
+message QuoteResponse {
+  string quote = 1;
+  string where = 2;
+}

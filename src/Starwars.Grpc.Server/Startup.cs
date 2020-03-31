@@ -32,6 +32,7 @@ namespace Starwars.Grpc.Server
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<QuotesService>();
 
                 endpoints.MapGet("/", async context =>
                 {
