@@ -6,13 +6,10 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Protos\quotes.proto" />
-  </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\quotes.proto" GrpcServices="Server" />
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <Protobuf Include="..\Protos\quotes.proto" GrpcServices="Server" />
+    <Protobuf Include="..\Protos\greet.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>

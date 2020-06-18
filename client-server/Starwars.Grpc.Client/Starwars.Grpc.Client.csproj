@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="..\Starwars.Grpc.Server\Protos\greet.proto" GrpcServices="Client">
+    <Protobuf Include="..\Protos\greet.proto" GrpcServices="Client">
       <Link>Protos\greet.proto</Link>
     </Protobuf>
-    <Protobuf Include="..\Starwars.Grpc.Server\Protos\quotes.proto" GrpcServices="Client">
+    <Protobuf Include="..\Protos\quotes.proto" GrpcServices="Client">
       <Link>Protos\quotes.proto</Link>
     </Protobuf>
   </ItemGroup>
