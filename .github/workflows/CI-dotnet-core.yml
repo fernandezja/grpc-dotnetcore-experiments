@@ -22,8 +22,17 @@ jobs:
       with:
         dotnet-version: 5.0.100
     - name: Install dependencies
-      run: dotnet restore Starwars.Grpc.sln
+      run: |
+        dotnet restore Starwars.Grpc.sln
+        dotnet restore Starwars.GrpcWeb.sln
+        dotnet restore Starwars.GrpcWebNullProperties.sln
     - name: Build
-      run: dotnet build Starwars.Grpc.sln --configuration Release --no-restore
+      run: |
+        dotnet build Starwars.Grpc.sln --configuration Release --no-restore
+        dotnet build Starwars.GrpcWeb.sln --configuration Release --no-restore
+        dotnet build Starwars.GrpcWebNullProperties.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test Starwars.Grpc.sln --no-restore --verbosity normal
+      run: |
+        dotnet test Starwars.Grpc.sln --no-restore --verbosity normal
+        dotnet test Starwars.GrpcWeb.sln --no-restore --verbosity normal
+        dotnet test Starwars.GrpcWebNullProperties.sln --no-restore --verbosity normal
