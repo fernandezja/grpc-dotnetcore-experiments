@@ -22,7 +22,7 @@ namespace Starwars.GrpcWebNullProperties.Client
             Console.ReadKey();
 
         }
-
+         
         private static async Task GreeterAsync() {
             var channel = GrpcChannel.ForAddress(ENDPOINT, new GrpcChannelOptions
             {

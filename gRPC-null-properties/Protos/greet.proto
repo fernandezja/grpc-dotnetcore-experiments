@@ -8,11 +8,13 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
   rpc SayHellos (HelloRequest) returns (stream HelloReply);
 }
-
+ 
 message HelloRequest {
   string name = 1;
-  bool isDarkSide = 2;
-  bool isLightSide = 3;
+  bool isDarkSide = 3;
+  bool isLightSide = 4;
+  //optional int32 magicNumber = 2; --experimental_allow_proto3_optional
+
 }
 
 message HelloReply {
@@ -20,4 +22,5 @@ message HelloReply {
   bool isActive = 2;
   bool isDarkSide = 3;
   bool isLightSide = 4;
+  //optional int32 magicNumber = 5; --experimental_allow_proto3_optional
 }
