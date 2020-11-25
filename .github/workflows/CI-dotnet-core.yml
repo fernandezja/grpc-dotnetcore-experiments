@@ -11,6 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    defaults:
+        run:
+            working-directory: ./src
+
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -18,8 +22,8 @@ jobs:
       with:
         dotnet-version: 5.0.100
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore Starwars.Grpc.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build Starwars.Grpc.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test Starwars.Grpc.sln --no-restore --verbosity normal
