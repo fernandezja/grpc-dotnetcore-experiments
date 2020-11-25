@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starwars.Grpc.Server", "Starwars.Grpc.Server\Starwars.Grpc.Server.csproj", "{3787D16A-9719-4AD1-B46E-03426865C36F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starwars.Grpc.Client", "Starwars.Grpc.Client\Starwars.Grpc.Client.csproj", "{0153BC1C-C096-4B95-B9C2-BC61C12A19FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starwars.Grpc.Client", "Starwars.Grpc.Client\Starwars.Grpc.Client.csproj", "{0153BC1C-C096-4B95-B9C2-BC61C12A19FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
