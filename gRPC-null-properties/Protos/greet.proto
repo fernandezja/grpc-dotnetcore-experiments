@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "Starwars.GrpcWebNullProperties";
+
+package greet;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc SayHellos (HelloRequest) returns (stream HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;
+  bool isDarkSide = 2;
+  bool isLightSide = 3;
+}
+
+message HelloReply {
+  string message = 1;
+  bool isActive = 2;
+  bool isDarkSide = 3;
+  bool isLightSide = 4;
+}
