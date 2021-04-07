@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.33.1" />
-    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.33.1" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.36.0" />
+    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.36.0" />
   </ItemGroup>
 
   <ItemGroup>
